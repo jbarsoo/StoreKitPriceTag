@@ -1,0 +1,20 @@
+The Apple App Store allows customers to purchase App content from within the App itself.  
+TBYBStoreButton extends a UISegmentedControl to make it behave like a dynamic price tag.  
+With it you can display the LIVE price of your App from within your App.
+
+What good is this?
+Apple allows developers to make up-to-the-minute (and scheduled) price changes to
+in-app purchasable content.  Customers will not know of these changes unless they
+attempt an in-app purchase.  StoreKitPriceTag shows the up-to-date price.
+
+Implementation:
+Include the files in your App,
+Add the appropriate code to record customer purchases and to implement purchased content,
+Replace the https://URL with that of your product server.
+Your product server should return the Apple Product Identifier that Apple has approved
+for use as an in-app purchase identifier.
+
+Managed Object Context:
+TBYBStoreButton and TBYBStoreObserver expect a pre-existing NSManagedObjectContext object.
+See Apple's CoreData documentation regarding their implementation.  Of course if you would
+rather record purchases some other way, fork my code and make those changes appropriately.
