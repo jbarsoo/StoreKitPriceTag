@@ -1,5 +1,5 @@
 The Apple App Store allows customers to purchase App content from within the App itself.  
-TBYBStoreButton extends a UISegmentedControl to make it behave like a dynamic price tag.  
+SKPTBuyButton extends a UISegmentedControl to make it behave like a dynamic price tag.  
 With it you can display the LIVE price of your App from within your App.
 
 What good is this?
@@ -15,6 +15,4 @@ Your product server should return the Apple Product Identifier that Apple has ap
 for use as an in-app purchase identifier.
 
 Managed Object Context:
-TBYBStoreButton and TBYBStoreObserver expect a pre-existing NSManagedObjectContext object.
-See Apple's CoreData documentation regarding their implementation.  Of course if you would
-rather record purchases some other way, fork my code and make those changes appropriately.
+SKPTBuyButton expects a pre-existing NSManagedObjectContext object (see Apple's CoreData documentation)
