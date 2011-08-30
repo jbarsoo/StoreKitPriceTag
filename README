@@ -16,3 +16,13 @@ for use as an in-app purchase identifier.
 
 Managed Object Context:
 SKPTBuyButton expects a pre-existing NSManagedObjectContext object (see Apple's CoreData documentation)
+
+Do I really need to use an external server to deliver my Apple Product Identifier?
+You could just set prodIdent to an Apple approved product identifier and deactivate the calls
+to an external server (and the parser).  Keep in mind that your Apple Product Identifier string would
+be visible to anyone who might run `strings` against your binary.
+
+I recommend implementing the product server.
+For example, if you want to forbid a particular in-app purchase (i.e. you found a critical bug
+in the purchased version) you could alter your server to NOT send the Apple Product Identifier
+string (which would disallow the purchase) until your bug-fixed version is released.
